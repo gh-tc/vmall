@@ -1,0 +1,20 @@
+#head{
+    .head-menu{
+        $menuLine : 70px;
+        background: #2e2828;
+        height: $menuLine;
+        ul{
+            line-height: $menuLine;
+            li{
+                float: left;
+                margin-left: 15px;
+            }
+        }
+    }
+    .head-logo{
+        img{
+            width: 150px;
+            margin: 20px;
+        }
+    }
+}

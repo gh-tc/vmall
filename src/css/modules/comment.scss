@@ -1,0 +1,55 @@
+
+
+//设置默认尺寸
+$defaultColor : #999;
+$defaultFontSize : 14px;
+$defaultContainer : 1200px;
+
+//样式重置
+*{ padding: 0;margin: 0; }
+html{overflow-x: hidden;}
+ul,ol{ list-style: none; }
+img{ display: block; }
+body,h1,h2,h3{ font-size: $defaultFontSize;color: $defaultColor; }
+a{ text-decoration: none;color: $defaultColor; }
+
+//通用的功能，版心、通栏、浮动、清浮动等
+.container{ width: $defaultContainer;position: relative;margin: 0 auto; }//版心
+.container-fluid{ position: relative; }//通栏
+.l{ float: left; }
+.r{ float: right; }
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+//定义一些混入
+
+//定位坐左上
+@mixin posLT {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+//文字居中
+@mixin textCenter($h) {
+    height: $h;
+    line-height: $h;
+    text-align: center;
+}
+
+//宽高100%
+@mixin wh100 {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+//弹性盒居中
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
